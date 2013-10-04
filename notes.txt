@@ -1,4 +1,4 @@
-http://habrahabr.ru/post/126134/
+﻿http://habrahabr.ru/post/126134/
 
 
 ---------------------------------------------------------------------
@@ -71,3 +71,4 @@ Do the same (remove the entire folders containing the mentioned assemblies) in t
 
 ---------------------------------------------------------------------
 
+http://habrahabr.ru/post/102826/
