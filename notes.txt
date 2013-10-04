@@ -1,1 +1,73 @@
 http://habrahabr.ru/post/126134/
+
+
+---------------------------------------------------------------------
+
+
+1. Uninstall the products (DevExpress CodeRush) from the Control Panel.
+
+2. Search for any remaining DevExpress.CodeRush~, DevExpress.DXCore~ or DevExpress.Refactor~ assemblies located on your hard drive, including your GAC (%WindowsRoot%\Assembly), and delete any if found.
+
+3. Backup your user settings located in the “%appdata%\CodeRush for VS .NET\1.1” folder and remove it.
+
+4. Delete the Registry keys that were added when installing the product. Please note, the keys to be removed differ for 64-bit and 32-bit OS versions. Here are the keys you should remove:
+
+For 32-bit OS
+
+HKEY_CLASSES_ROOT\Installer\Products\1B5C4D2C5C682AC4B90028FD5D8DFB62
+HKEY_CLASSES_ROOT\Installer\UpgradeCodes\781A3E6ADAAEC45469EF271B371F91AF
+HKEY_LOCAL_MACHINE\SOFTWARE\Developer Express\CodeRush for VS
+HKEY_CURRENT_USER\SOFTWARE\Developer Express\CodeRush for VS
+HKEY_CLASSES_ROOT\CLSID\{7EB58660-96F1-49CF-B8AF-F47152B8CE29}
+HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\VisualStudio\{VSVersion}\AddIns\CodeRush
+HKEY_LOCAL_MACHINE\SOFTWARE\Software\Microsoft\Visual Studio\{VSVersion}\Addins\CodeRush
+HKEY_CURRENT_USER\SOFTWARE\Software\Microsoft\Visual Studio\{VSVersion}\Addins\CodeRush
+HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\VisualStudio\{VSVersion}\Packages\{13041012-50AF-4d13-A1E1-4978B21E49CD}
+HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\VisualStudio\{VSVersion}\Packages\{BD359A86-BF88-4c4e-A7D2-6CDDA36C3B79}
+HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\VisualStudio\{VSVersion}\Packages\{02BD4ECB-C032-4ced-B3C1-51AD29309225}
+HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\VisualStudio\{VSVersion}\InstalledProducts\DXCore
+HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\VisualStudio\{VSVersion}\InstalledProducts\Refactor!
+HKEY_CLASSES_ROOT\Installer\UpgradeCodes\781A3E6ADAAEC45469EF271B371F91AF
+
+For 64-bit OS
+
+HKEY_CLASSES_ROOT\Installer\Products\1B5C4D2C5C682AC4B90028FD5D8DFB62
+HKEY_CLASSES_ROOT\Installer\UpgradeCodes\781A3E6ADAAEC45469EF271B371F91AF
+HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Developer Express\CodeRush for VS
+HKEY_CURRENT_USER\SOFTWARE\Wow6432Node\Developer Express\CodeRush for VS
+HKEY_CLASSES_ROOT\CLSID\{7EB58660-96F1-49CF-B8AF-F47152B8CE29}
+HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\VisualStudio\{VSVersion}\AddIns\CodeRush
+HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Software\Microsoft\Visual Studio\{VSVersion}\Addins\CodeRush
+HKEY_CURRENT_USER\SOFTWARE\Wow6432Node\Software\Microsoft\Visual Studio\{VSVersion}\Addins\CodeRush
+HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\VisualStudio\{VSVersion}\Packages\{13041012-50AF-4d13-A1E1-4978B21E49CD}
+HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\VisualStudio\{VSVersion}\Packages\{BD359A86-BF88-4c4e-A7D2-6CDDA36C3B79}
+HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\VisualStudio\{VSVersion}\Packages\{02BD4ECB-C032-4ced-B3C1-51AD29309225}
+HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\VisualStudio\{VSVersion}\InstalledProducts\DXCore
+HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\VisualStudio\{VSVersion}\InstalledProducts\Refactor!
+HKEY_CLASSES_ROOT\Installer\UpgradeCodes\781A3E6ADAAEC45469EF271B371F91AF
+
+5. Delete the DevExpressTools.Addin file from the following folders:
+
+For Windows XP:
+
+%AppData%\Microsoft\MsEnvShared\Addins
+
+For Windows Vista, Windows 7 and up:
+
+%ProgramData%\Microsoft\MSEnvShared\Addins
+
+6. Navigate to the following folder:
+
+%AppData%\Local\microsoft\VisualStudio\%VSVersion%\Extensions\
+
+(replace the %VSVersion% in each of the Visual Studio versions you have installed)
+
+Find the folders containing the "DevExpress.DXCore.MefComponents.dll" assembly and completely remove them.
+
+Do the same (remove the entire folders containing the mentioned assemblies) in the following folder:
+
+%Program Files%\Microsoft Visual Studio %VSVersion%\Common7\IDE\Extensions\DevExpress\
+
+
+---------------------------------------------------------------------
+
